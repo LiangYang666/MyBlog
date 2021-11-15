@@ -12,7 +12,8 @@ File Encoding         : 65001
 
 Date: 2019-09-26 18:36:12
 */
-
+CREATE DATABASE `blog`;
+use `blog`;
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
@@ -40,9 +41,9 @@ CREATE TABLE `blog` (
 -- ----------------------------
 -- Records of blog
 -- ----------------------------
-INSERT INTO `blog` VALUES ('1566276948', 'springboot', 'cesiyixa\n> 不能\nfg\n\n![](/63e09177-338e-47a3-a8db-f1dd2e19e70e/face/1566276932547_158.png)', '1,2', '原创', '程序录', '0', '', '0', '2019-08-20', '0', '强子', 'cesiyixa不能fg...', '3');
-INSERT INTO `blog` VALUES ('1566277253', 'springboot实现搭建个人博客（前后端分离）', '![](/63e09177-338e-47a3-a8db-f1dd2e19e70e/face/1566277237445_157.png)', '3', '原创', '程序录', '0', '', '0', '2019-08-20', '0', '强子', '...', '1');
-INSERT INTO `blog` VALUES ('1566277542', 'weqrw', 'erqwf', '122', '转载', '程序录', '5', '', '0', '2019-08-20', '0', '强子', 'erqwf...', '0');
+INSERT INTO `blog` VALUES ('1566276948', 'springboot', 'cesiyixa\n> 不能\nfg\n\n![](/63e09177-338e-47a3-a8db-f1dd2e19e70e/face/1566276932547_158.png)', '1,2', '原创', '程序录', '0', '', '0', '2019-08-20', '0', 'liang', 'cesiyixa不能fg...', '3');
+INSERT INTO `blog` VALUES ('1566277253', 'springboot实现搭建个人博客（前后端分离）', '![](/63e09177-338e-47a3-a8db-f1dd2e19e70e/face/1566277237445_157.png)', '3', '原创', '程序录', '0', '', '0', '2019-08-20', '0', 'liang', '...', '1');
+INSERT INTO `blog` VALUES ('1566277542', 'weqrw', 'erqwf', '122', '转载', '程序录', '5', '', '0', '2019-08-20', '0', 'liang', 'erqwf...', '0');
 
 -- ----------------------------
 -- Table structure for comment
@@ -67,7 +68,7 @@ CREATE TABLE `comment` (
 -- ----------------------------
 -- Records of comment
 -- ----------------------------
-INSERT INTO `comment` VALUES ('1566276963', '63e09177-338e-47a3-a8db-f1dd2e19e70e', '1566276948', 'dfjksafl', '2019-08-20 12:56:03', '1', '1', '强子');
+INSERT INTO `comment` VALUES ('1566276963', '63e09177-338e-47a3-a8db-f1dd2e19e70e', '1566276948', 'dfjksafl', '2019-08-20 12:56:03', '1', '1', '洪城布衣');
 
 -- ----------------------------
 -- Table structure for commentlikes
@@ -90,7 +91,7 @@ CREATE TABLE `commentlikes` (
 -- ----------------------------
 -- Records of commentlikes
 -- ----------------------------
-INSERT INTO `commentlikes` VALUES ('1566276967', '1566276948', '1566276963', '强子', '2019-08-20 12:56:07', '1');
+INSERT INTO `commentlikes` VALUES ('1566276967', '1566276948', '1566276963', '洪城布衣', '2019-08-20 12:56:07', '1');
 
 -- ----------------------------
 -- Table structure for friendlikes
@@ -127,7 +128,7 @@ CREATE TABLE `friendlink` (
 -- ----------------------------
 -- Records of friendlink
 -- ----------------------------
-INSERT INTO `friendlink` VALUES ('1566277015', '63e09177-338e-47a3-a8db-f1dd2e19e70e', 'dfag', '2019-08-20 12:56:55', '0', '1', '强子');
+INSERT INTO `friendlink` VALUES ('1566277015', '63e09177-338e-47a3-a8db-f1dd2e19e70e', 'dfag', '2019-08-20 12:56:55', '0', '1', '洪城布衣');
 
 -- ----------------------------
 -- Table structure for friendurl
@@ -342,13 +343,13 @@ CREATE TABLE `users` (
   `email` varchar(20) NOT NULL COMMENT 'email邮箱',
   `intro` varchar(255) NOT NULL COMMENT '个人简历',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
 INSERT INTO `users` VALUES ('56db1007-5b9f-44f9-a73b-fc64e4e92a8c', 'dong', 'bd0596c7bfd4a4ea8c36a9695ef8d77e', '15383466858', '0', '2019-08-17', '2', '', '', '', '');
-INSERT INTO `users` VALUES ('63e09177-338e-47a3-a8db-f1dd2e19e70e', '强子', 'ee663543a50fa1ca6edadcee6a91455d', '15383466854', '0', '2019-08-06', '1', '1', '1', '1', '1');
+INSERT INTO `users` VALUES ('63e09177-338e-47a3-a8db-f1dd2e19e70e', '洪城布衣', 'ee663543a50fa1ca6edadcee6a91455d', '15383466854', '0', '2019-08-06', '1', '1', '1', '1', '1');
 INSERT INTO `users` VALUES ('dfdf', '12', 'efaef', '12344', '0', 'efsdf', '1', 'df', '2', '3', 'dfe');
 
 -- ----------------------------
