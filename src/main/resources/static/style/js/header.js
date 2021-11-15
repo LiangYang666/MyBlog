@@ -146,7 +146,7 @@ $(".personalSpace").click(function () {
             if (data.status == 500) {
                 toLogin();
             }else{
-                if(name == "强子"){
+                if(name == "洪城布衣"){
                     messageNotReadMana();
                 }else{
                     messageNotReadUser();
